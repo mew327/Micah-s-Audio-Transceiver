@@ -1,0 +1,59 @@
+Specifications
+
+Audio Source: Electric guitar with passive pickups
+System: One transmitter and one pocket/belt-worn receiver
+Range: < 3m, including movement and body obstruction
+Output: Headphone-level output for standard wired headphones
+Output connector: 3.5 mm stereo TRS headphone jack (Proposed)
+Headphone impedance: 16-64 ohms initial target; verify against actual headphones
+Input: 1/4 in TS instrument jack from guitar (Tentative)
+Input impedance: 1 MΩ (Target Value)
+Input circuitry: Low-noise high-impedance buffer, protection, and adjustable level conditioning (Required)
+Audio format: 44.1 kHz, 16-bit uncompressed PCM (Planned)
+Channels: Mono, reproduced in both ears (Tentative)
+Audio payload rate: 705.6 kbit/s for mono, excluding packet overhead
+Wireless technology: Dedicated proprietary 2.4 GHz radio link; no Wi-Fi
+Radio bitrate: Evaluate 2 and 4 Mbit/s modes for latency and reliability
+Latency: <= 3 ms guitar-input-to-headphone-output target; <= 5 ms initial milestone (To verify)
+Controls: Headphone volume, power, and connection status (Planned)
+Fault handling: Startup mute, controlled packet-loss handling, and mute on connection loss (Required)
+Power: External power for initial bring-up; battery-powered portable operation afterward (Proposed)
+Sound: Clean guitar pickup signal; amp/cabinet simulation and effects are optional
+
+Proposed Hardware
+
+MCU and radio: nRF54L15, one per unit
+(https://docs.nordicsemi.com/r/bundle/ps_nrf54l15/page/keyfeatures_html5.html)
+
+Audio codec: TLV320AIC3204, one per unit; ADC on transmitter and DAC/headphone drivers on receiver
+(https://www.ti.com/lit/ds/symlink/tac5112.pdf)
+
+Guitar interface: Additional low-noise high-impedance input buffer on transmitter
+
+Clocking: Compatible codec/I2S audio clocks plus firmware correction for transmitter/receiver clock drift
+
+Antenna: Custom 2.4 GHz PCB antenna on each unit
+
+RF circuitry: Nordic package-specific reference matching/filter network, 50-ohm PCB transmission line, and separate antenna tuning footprints
+
+RF test connection: Selectable SMA connection for comparing the custom PCB antenna with an external antenna
+
+Antenna placement: PCB edge with geometry-specific clearance; tune and test with enclosure, battery, headphone cable, and body nearby
+
+Power circuitry: Regulators and decoupling; battery protection and charging for portable version
+
+Debug access: SWD programming connector and power, clock, I2S, and control test points
+
+
+Signal Path
+
+Transmitter: Guitar -> input buffer/conditioning -> codec ADC -> nRF54L15 -> RF matching/filter -> transmission line -> antenna tuning -> custom PCB antenna
+Receiver: Custom PCB antenna -> antenna tuning -> transmission line -> RF matching/filter -> nRF54L15 -> codec DAC/headphone drivers -> headphones
+
+To Finalize
+
+Maximum guitar input level and required headroom
+Actual headphone model, maximum output level, and acceptable hiss
+Battery runtime and enclosure dimensions
+Whether a guitar-through output is needed for simultaneous amplifier use
+Final audio clock configuration, power rails, and component values before ordering
