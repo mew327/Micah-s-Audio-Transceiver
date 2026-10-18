@@ -2,6 +2,7 @@ This is a working draft
 
 Specifications
 
+Enclosure size: Receiver 100 × 75 × 30 mm (Tentative) Transmitter (TBD)
 Audio Source: Electric guitar with passive pickups
 System: One transmitter and one pocket/belt-worn receiver
 Range: < 3m, including movement and body obstruction
@@ -32,6 +33,9 @@ Audio codec: TLV320AIC3204, one per unit; ADC on transmitter and DAC/headphone d
 
 Oscillator: SiT8008BC-22-33E-12.288000G, one per unit
 (https://www.mouser.com/datasheet/3/708/1/SiT8008B_datasheet.pdf)
+
+Debugger: NRF54L15-DK + 1.27 mm Cortex SWD ribbon cable (order through maker club)
+(https://www.digikey.com/en/products/detail/nordic-semiconductor-asa/NRF54L15-DK/25601516) + (https://www.amazon.com/dp/B01D0YSTBE?lv=shuf&channelId=500&plpRedirect=mhFallback)
 
 Guitar interface: Additional low-noise high-impedance input buffer on transmitter
 
@@ -124,3 +128,92 @@ Still to verify:
 
 Status:
 Proposed architecture; not yet verified for fabrication.
+
+Receiver headphone output — draft
+Connector: 3.5 mm stereo TRS
+Tip = left; ring = right; sleeve = GND.
+Target headphone impedance: 32 ohms per channel.
+
+TAC5112 configuration:
+OUT1P (pin 20) → C16 → jack tip.
+OUT1M (pin 19) → C17 → jack ring.
+Configure OUT1P/OUT1M as independent single-ended
+headphone outputs, not the default differential mode.
+Route the same mono guitar audio to both channels.
+
+C16/C17: proposed 220uF, 6.3V, ±20% aluminum electrolytic.
+Positive terminals face the codec.
+Calculated cutoff: approximately 23Hz into 32 ohms.
+Exact capacitor parts, footprints, and jack remain TBD.
+Verify output level, startup pops, and bass response in testing.
+
+
+Connector Wiring:
+Receiver SWD programming/debug connector — J1
+Debugger: Nordic nRF54L15 DK, P19 DEBUG OUT
+Connector: 2×5 male header, 1.27 mm pitch
+Cable: matching straight-through ribbon, maximum 10 cm
+
+J1 pin | Signal  | Receiver connection
+1      | VTref   | +3V3
+2      | SWDIO   | U1 dedicated SWDIO, physical pin 25
+3      | SELECT  | GND; selects external target on DK
+4      | SWCLK   | U1 dedicated SWDCLK, physical pin 26
+5      | GND     | GND
+6      | SWO     | Unconnected
+7      | NC      | Unconnected
+8      | NC      | Unconnected
+9      | NC      | Unconnected
+10     | nRESET  | U1 dedicated RESET, physical pin 30
+
+SWD uses dedicated chip pins, not the configurable
+P1.xx GPIO assignments used for the codec.
+
+Power the receiver separately at 3.3V for debugging.
+Pin 1 provides the target voltage reference.
+
+ANTENNA / RF PLAN — DRAFT
+
+Radio: Nordic nRF54L15-QFAA
+Operating band: 2.4 GHz ISM, approximately 2400–2483.5 MHz
+Protocol: proprietary 2.4 GHz radio
+Range target: 3 metres, including movement/body obstruction
+Antenna type: PCB trace antenna on each unit
+
+Signal path:
+U1 ANT pin 31 → Nordic matching/filter network
+→ 50-ohm feed → antenna matching, if needed → PCB antenna
+
+Nordic QFAA reference RF components:
+- 1 × 2.7 nH inductor, ±0.1 nH, ≥600 mA,
+  DC resistance ≤0.12 ohm
+- 2 × 3.5 nH inductors, ±0.1 nH, ≥500 mA,
+  DC resistance ≤0.17 ohm
+- 1 × 1.5 pF capacitor, NP0, ±0.05 pF, 25 V, high Q
+- 1 × 2.0 pF capacitor, NP0, ±0.05 pF, 25 V
+- 1 × 0.3 pF capacitor, C0G, ±0.1 pF, 50 V
+All above: 0201 imperial / 0603 metric packages.
+
+Layout requirements:
+Follow Nordic’s radio matching/filter placement and routing.
+Choose a proven PCB antenna reference design.
+Preserve its antenna geometry and required copper keepout.
+Calculate the 50-ohm feed width using the actual PCB stackup.
+Keep the battery and metal away from the antenna region.
+Verify performance in the final enclosure and near the body.
+Allow for antenna matching/tuning after prototype measurements.
+
+Still TBD:
+Exact antenna reference, dimensions, board stackup,
+feed width, keepout dimensions, and manufacturer part numbers.
+Reference RF values must be checked against the chosen layout.
+
+Reference:
+https://docs.nordicsemi.com/r/bundle/ps_nrf54l15/page/chapters/ref_circuitry.html-concept_refcircuit_config_1
+
+Receiver PCB size: TBD × TBD mm
+Enclosure material: TBD
+Battery size and position: TBD
+Antenna location: reserve one PCB edge/corner
+Antenna reference design: TBD
+PCB stackup: TBD
