@@ -217,3 +217,21 @@ Battery size and position: TBD
 Antenna location: reserve one PCB edge/corner
 Antenna reference design: TBD
 PCB stackup: TBD
+
+Enclosure draft: 100 × 75 × 30 mm external
+Interior cavity: 96 × 71 × 26 mm before lid rim
+PCB outline: TBD; allow space for mounting and connectors
+Antenna: PCB trace antenna on transmitter and receiver. reserve one board edge away from battery and metal
+Approach: start from a proven reference layout.
+(see swru120d)
+Allow 3–4 PCB revisions for circuit, layout, and RF tuning.
+Validate range with enclosure fitted and receiver worn in pocket.
+Exact antenna geometry and PCB stackup: TBD.
+
+Revision-1 antenna candidate: TI SWRU120D inverted-F antenna.
+Nominal antenna area: 25.7 × 7.5 mm, excluding ground plane.
+Reference PCB: 1 mm FR-4.
+Final stackup, ground clearances, matching, and test access: TBD.
+
+TI reference: top PCB edge to L4 copper boundary ≈7.48 mm.
+Measured from Gerber overlay; not yet a finalized keepout.
