@@ -1,0 +1,150 @@
+ERC report (2026-10-24T01:56:11, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 2200 mils): Symbol U1 Pin 1 [P1.00, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 2400 mils): Symbol U1 Pin 2 [P1.01, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 2700 mils): Symbol U1 Pin 23 [P0.00, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 2800 mils): Symbol U1 Pin 24 [P0.01, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 2900 mils): Symbol U1 Pin 27 [P0.02, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 3000 mils): Symbol U1 Pin 28 [P0.03, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 3100 mils): Symbol U1 Pin 29 [P0.04, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 3300 mils): Symbol U1 Pin 3 [P1.02, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 3900 mils): Symbol U1 Pin 9 [P1.08, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 4000 mils): Symbol U1 Pin 37 [P1.09, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 4100 mils): Symbol U1 Pin 38 [P1.10, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 4200 mils): Symbol U1 Pin 39 [P1.11, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 4300 mils): Symbol U1 Pin 40 [P1.12, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 4400 mils): Symbol U1 Pin 41 [P1.13, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 4500 mils): Symbol U1 Pin 42 [P1.14, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 4700 mils): Symbol U1 Pin 11 [P2.00, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 4800 mils): Symbol U1 Pin 12 [P2.01, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 4900 mils): Symbol U1 Pin 13 [P2.02, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 5000 mils): Symbol U1 Pin 14 [P2.03, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 5100 mils): Symbol U1 Pin 15 [P2.04, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 5200 mils): Symbol U1 Pin 16 [P2.05, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 5300 mils): Symbol U1 Pin 17 [P2.06, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 5400 mils): Symbol U1 Pin 18 [P2.07, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 5500 mils): Symbol U1 Pin 19 [P2.08, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 5600 mils): Symbol U1 Pin 20 [P2.09, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(3850 mils, 5700 mils): Symbol U1 Pin 21 [P2.10, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(6050 mils, 3700 mils): Symbol U1 Pin 31 [ANT, Output, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(6100 mils, 7050 mils): Symbol U3 Pin 4 [V_{DD}, Power input, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(6500 mils, 7450 mils): Symbol U3 Pin 1 [STAT, Tri-state, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(9750 mils, 2800 mils): Symbol U2 Pin 4 [DOUT, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(9750 mils, 3300 mils): Symbol U2 Pin 9 [GPIO1, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(9750 mils, 3400 mils): Symbol U2 Pin 10 [GPIO2, Bidirectional, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(9750 mils, 3500 mils): Symbol U2 Pin 11 [GPO1, Output, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(9750 mils, 3800 mils): Symbol U2 Pin 14 [MICBIAS, Output, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(11750 mils, 3200 mils): Symbol U2 Pin 22 [OUT2M, Output, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(11750 mils, 3300 mils): Symbol U2 Pin 21 [OUT2P, Output, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(11750 mils, 3600 mils): Symbol U2 Pin 18 [IN2M, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(11750 mils, 3600 mils): Symbol U2 Pin 18 [IN2M, Input, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(11750 mils, 3700 mils): Symbol U2 Pin 17 [IN2P, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(11750 mils, 3700 mils): Symbol U2 Pin 17 [IN2P, Input, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(11750 mils, 3800 mils): Symbol U2 Pin 16 [IN1M, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(11750 mils, 3800 mils): Symbol U2 Pin 16 [IN1M, Input, Line]
+[pin_not_connected]: Pin not connected
+    ; error
+    @(11750 mils, 3900 mils): Symbol U2 Pin 15 [IN1P, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(11750 mils, 3900 mils): Symbol U2 Pin 15 [IN1P, Input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(12950 mils, 3000 mils): Symbol #PWR01 Pin 1 [Power input, Line]
+[lib_symbol_mismatch]: Symbol 'TAC5112IRGER' doesn't match copy in library '2026-10-17_03-48-29'
+    ; warning
+    @(9750 mils, 2500 mils): Symbol U2 [TAC5112IRGER]
+
+ ** ERC messages: 46  Errors 45  Warnings 1
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

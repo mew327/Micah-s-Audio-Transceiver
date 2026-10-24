@@ -22,6 +22,7 @@ Controls: Headphone volume, power, and connection status (Planned)
 Fault handling: Startup mute, controlled packet-loss handling, and mute on connection loss (Required)
 Power: External power for initial bring-up; battery-powered portable operation afterward (Proposed)
 Sound: Clean guitar pickup signal; amp/cabinet simulation and effects are optional
+Charging: USB-C, receiver disabled during charging
 
 Proposed Hardware
 
@@ -52,6 +53,12 @@ Antenna placement: PCB edge with geometry-specific clearance; tune and test with
 Power circuitry: Regulators and decoupling; battery protection and charging for portable version
 
 Debug access: SWD programming connector and power, clock, I2S, and control test points
+
+Battery: Adafruit Lithium Ion Polymer Battery - 3.7v 1200mAh + MCP73831 charger + TPS63031DSKT voltage regulator + 2N7002 shut off switch
+(https://www.digikey.com/en/products/detail/adafruit-industries-llc/258/5054544)
+(https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP73831-Family-Data-Sheet-DS20001984H.pdf)
+(https://www.digikey.com/en/products/detail/texas-instruments/TPS63031DSKT/1967863)
+(https://www.digikey.com/en/products/detail/onsemi/2N7002/244345)
 
 
 Signal Path
@@ -233,5 +240,12 @@ Nominal antenna area: 25.7 × 7.5 mm, excluding ground plane.
 Reference PCB: 1 mm FR-4.
 Final stackup, ground clearances, matching, and test access: TBD.
 
-TI reference: top PCB edge to L4 copper boundary ≈7.48 mm.
-Measured from Gerber overlay; not yet a finalized keepout.
+Reference antenna placement:
+Left PCB edge → left antenna copper: approximately 2.91 mm.
+Top PCB edge → L4 copper boundary: approximately 7.48 mm.
+
+Receiver PCB outline candidate: 90 × 65 mm.
+Antenna: TI SWRU120D IFA at a board corner.
+Reference board dimensions differ; matching must be measured
+and tuned on our PCB.
+PCB stackup and antenna keepout remain unfinalized.
