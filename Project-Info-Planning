@@ -2,7 +2,7 @@ This is a working draft
 
 Specifications
 
-Enclosure size: Receiver 100 × 75 × 30 mm (Tentative) Transmitter (TBD)
+Enclosure size: Receiver 100 × 75 × 30 mm (Tentative) Transmitter (TBD) (Try to shrink)
 Audio Source: Electric guitar with passive pickups
 System: One transmitter and one pocket/belt-worn receiver
 Range: < 3m, including movement and body obstruction
@@ -87,6 +87,13 @@ External oscillator frequency and part number: TBD
 Codec clock-input pin and register settings: TBD
 nRF I²S pin assignments: TBD
 Clock-drift correction implementation: TBD
+
+Clock Plan Draft v2
+Y1: 12.288 MHz external CCLK.
+TAC5112: primary I2S controller, fixed-CCLK mode,
+PLL enabled. FSYNC = 44.1 kHz; BCLK = 1.4112 MHz.
+Two 16-bit slots. nRF54L15: I2S slave.
+Firmware configuration and bench verification required.
 
 Oscillator candidate:
 SiTime SiT8008BC-22-33E-12.288000G

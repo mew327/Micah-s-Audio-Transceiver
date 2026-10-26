@@ -1,0 +1,24 @@
+ERC report (2026-10-24T21:32:20, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[lib_symbol_mismatch]: Symbol 'nRF54L15-QFXX' doesn't match copy in library 'nordic-lib-kicad-nrf54l'
+    ; warning
+    @(4950 mils, 3700 mils): Symbol U1 [nRF54L15-QFXX]
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(6050 mils, 4850 mils): Vertical Wire, length 50 mils
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(7150 mils, 3950 mils): Vertical Wire, length 50 mils
+[lib_symbol_mismatch]: Symbol 'TAC5112IRGER' doesn't match copy in library '2026-10-17_03-48-29'
+    ; warning
+    @(9750 mils, 2500 mils): Symbol U2 [TAC5112IRGER]
+
+ ** ERC messages: 4  Errors 0  Warnings 4
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters
