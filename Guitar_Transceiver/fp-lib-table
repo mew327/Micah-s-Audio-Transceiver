@@ -3,4 +3,5 @@
 	(lib (name "footprints") (type "KiCad") (uri "C:/Users/mattw/Projects/Micah-s-Audio-Transceiver/libraries/TAC5112 KiCADv6/footprints.pretty") (options "") (descr ""))
 	(lib (name "nordic-lib-kicad-nrf54l") (type "KiCad") (uri "C:/Users/mattw/Projects/Miscellaneous/nordic-lib-kicad/footprints/nordic-lib-kicad-nrf54l.pretty") (options "") (descr ""))
 	(lib (name "Audio_Transceiver") (type "KiCad") (uri "${KIPRJMOD}/Audio_Transceiver.pretty") (options "") (descr ""))
+	(lib (name "Audio_Transceiver_TI_Candidates") (type "KiCad") (uri "${KIPRJMOD}/Audio_Transceiver_TI_Candidates.pretty") (options "") (descr ""))
 )
